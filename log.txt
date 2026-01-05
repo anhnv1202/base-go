@@ -1,0 +1,2 @@
+{"level":"INFO","time":"2025-12-31T15:12:40.166+0700","msg":"Hello, world!"}
+{"level":"ERROR","time":"2025-12-31T15:12:40.166+0700","msg":"This is an error message"}
