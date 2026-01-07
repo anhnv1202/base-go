@@ -153,6 +153,7 @@ func Wrap(fn func(*gin.Context) (any, error)) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		result, err := fn(c)
 		if err != nil {
+			c.Error(err)
 			Error(c, err)
 			return
 		}
