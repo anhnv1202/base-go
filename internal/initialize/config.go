@@ -74,6 +74,19 @@ func setDefaults() {
 	viper.SetDefault("CORS_ALLOWED_METHODS", "GET,POST,PUT,PATCH,DELETE,OPTIONS")
 	viper.SetDefault("CORS_ALLOWED_HEADERS", "Origin,Content-Type,Accept,Authorization")
 	viper.SetDefault("CORS_MAX_AGE", 86400)
+
+	// Redis defaults
+	viper.SetDefault("REDIS_MODE", "standalone")
+	viper.SetDefault("REDIS_HOST", "localhost")
+	viper.SetDefault("REDIS_PORT", 6379)
+	viper.SetDefault("REDIS_DB", 0)
+	viper.SetDefault("REDIS_POOL_SIZE", 100)
+	viper.SetDefault("REDIS_MIN_IDLE_CONNS", 10)
+	viper.SetDefault("REDIS_MAX_RETRIES", 3)
+	viper.SetDefault("REDIS_DIAL_TIMEOUT", "5s")
+	viper.SetDefault("REDIS_READ_TIMEOUT", "3s")
+	viper.SetDefault("REDIS_WRITE_TIMEOUT", "3s")
+	viper.SetDefault("REDIS_POOL_TIMEOUT", "4s")
 }
 
 // validate checks required configuration fields

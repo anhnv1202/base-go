@@ -7,4 +7,8 @@ import (
 
 func InitLogger() {
 	global.Logger = logger.NewLogger(global.Config.Log)
+
+	OnShutdown(func() {
+		global.Logger.Close()
+	})
 }
