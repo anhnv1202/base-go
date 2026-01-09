@@ -7,7 +7,6 @@ import (
 	"time"
 
 	"github.com/anhnv1202/base-go/global"
-	"github.com/anhnv1202/base-go/internal/routers"
 	"go.uber.org/zap"
 )
 
@@ -17,7 +16,7 @@ func Run() {
 	InitDatabase()
 	InitRedis()
 
-	r := routers.InitRouter()
+	r := InitRouter()
 	srv := &http.Server{
 		Addr:    ":" + strconv.Itoa(global.Config.App.Port),
 		Handler: r,

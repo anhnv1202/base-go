@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Skill(senior-backend)"
+      "Skill(senior-backend)",
+      "Skill(todo)",
+      "Skill(beads:init)",
+      "Skill(beads:create)"
     ]
   }
 }
